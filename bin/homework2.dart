@@ -52,10 +52,8 @@ class LandVehicles extends AutoMechanical{
 class Car extends AutoMechanical{
   String brand = "";
   int price = 0;
-  // Car(String carBrand, int carPrice) {
-  //   brand = carBrand;
-  //   price = carPrice;
-  // }
+
+
   void drivin(){
     print( "car is drivin");
   }
@@ -76,12 +74,9 @@ class Person {
 
   int age = 0;
 
-  Person(this.fullName, this.age) {
-  }
+  Person(this.fullName, this.age);
 
-  Person.personDefault(){
-
-}
+  Person.personDefault();
 
   void move(){
     print("$fullName идет гулять");
@@ -122,7 +117,6 @@ class Student extends User {
   Student(String name, String surname, DateTime yearOfAdmission) {
     this.name = name;
     this.surname = surname;
-    this.yearOfAdmission = yearOfAdmission;
   }
 
   int get currentCourse => DateTime.now().year - yearOfAdmission.year;
@@ -130,9 +124,7 @@ class Student extends User {
 
   @override
   toString() {
-    return super.toString() +
-        ", год поступления: ${yearOfAdmission.year}" +
-        ", курс: $currentCourse";
+    return "${super}, год поступления: ${yearOfAdmission.year}, курс: $currentCourse";
   }
 }
 
